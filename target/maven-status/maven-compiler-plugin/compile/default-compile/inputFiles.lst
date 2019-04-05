@@ -1,0 +1,17 @@
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/model/User.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/Encoders.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/JwtTokenProvider.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/ApplicationRestService.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/search/UserSpecification.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/InvalidJwtAuthenticationException.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/controller/AuthInfo.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/service/UserServiceImpl.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/service/UserService.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/JwtConfigurer.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/JwtTokenFilter.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/authorization/config/ServerSecurityConfig.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/controller/UserController.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/search/Filter.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/dao/UserRepository.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/controller/AuthController.java
+/home/fbertos/workspace/spring-security/src/main/java/org/fbertos/persistence/model/Authority.java
