@@ -21,9 +21,12 @@ public class UserController {
 	 @Autowired
 	 private UserService userService;
 	 
-	 @GetMapping(value="/users/{userId}")
-	 public @ResponseBody User get(@PathVariable Long userId) {
-		 return userService.get(userId);
+	 @GetMapping(value="/users/{username}")
+	 public @ResponseBody User get(@PathVariable String username) {
+		 String q = "username like " + username;
+		 List<User> l = userService.find(new Filter(q, null, null, null));
+		 if (l.size() > 0) return l.get(0);
+		 return null;
 	 }
 	 
 	 @DeleteMapping(value="/users/{username}")
