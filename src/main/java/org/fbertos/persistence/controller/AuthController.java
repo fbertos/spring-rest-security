@@ -37,7 +37,7 @@ public class AuthController {
 	 @Autowired
 	 AuthenticationManager authenticationManager;
 	 
-	 @GetMapping(value="/auth")
+	 @PostMapping(value="/auth")
 	 public @ResponseBody ResponseEntity<AuthInfo> auth(@RequestParam String username, @RequestParam String password) {
 		 try {
 			 authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));

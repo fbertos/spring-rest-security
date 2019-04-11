@@ -8,6 +8,7 @@ import org.fbertos.persistence.search.Filter;
 import org.fbertos.persistence.search.UserSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -29,11 +30,13 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		return userRepository.findById(id).get();
 	}
 
-    @PreAuthorize("hasAuthority('USER_READ')")
+    //@PreAuthorize("hasAuthority('USER_READ')")
+    @PostFilter("hasPermission(filterObject, 1)")
 	public List<User> find(Filter filter) {
 		UserSpecification spec = new UserSpecification(filter);
 		Pageable page = spec.toPageable();
-		return userRepository.findAll(spec, page).getContent();
+		return userRepository.findAll(spec);
+		//return userRepository.findAll(spec, page).getContent();
 	}
 	
     @PreAuthorize("hasAuthority('USER_UPDATE')")
